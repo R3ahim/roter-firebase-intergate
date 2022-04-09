@@ -1,8 +1,11 @@
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useFireBase from '../../useFirebase';
 import './Header.css'
 
 const Header = () => {
+    const {user} = useFireBase();
     return (
         <div className='header'>
             <nav>
@@ -10,7 +13,12 @@ const Header = () => {
                 <Link to='/products'>Products</Link>
                 <Link to='/Order'>Order</Link>
                 <Link to='/register'>Register</Link>
-                <Link to='/login'>Login</Link>
+                {
+                    !user.uid
+                    ?
+                    <button>sign out</button>
+                    :
+                    <Link to='/login'>Login</Link>}
             </nav>
         </div>
     );
