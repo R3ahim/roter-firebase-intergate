@@ -5,6 +5,7 @@ import Home from './components/Header/Home/Home';
 import Login from './components/Login/Login';
 import './App.css'
 import Register from './components/Register/Register';
+import Products from './components/Products/Products';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path ='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/register' element={<Register></Register>}></Route>
+       <Route path='/products' element={<Products></Products>}></Route>
       </Routes>
     </div>
   );
