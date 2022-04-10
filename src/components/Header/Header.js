@@ -15,9 +15,11 @@ const Header = () => {
             <nav>
                 <Link to='/'>Home</Link>
                 <Link to='/products'>Products</Link>
-                <Link to='/Order'>Order</Link>
+                <Link to='/orders'>Order</Link>
                 <Link to='/register'>Register</Link>
-                <span>{user?.displayName && user.displayName}</span>
+              
+                
+                                <span>{user?.displayName && user.displayName}</span>
                 {
                     user?.uid
                     ?
